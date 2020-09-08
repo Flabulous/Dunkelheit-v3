@@ -2,6 +2,7 @@ require "math"
 math.randomseed( os.time() )
 
 hunter = {}
+hunterInventory = {}
 hunter["LVL"] = 0
 hunter["CST"] = 0
 hunter["MRL"] = 0
@@ -23,7 +24,6 @@ hunter["WIS"] = 0
 
 function makeHunter(r)
 r = hunter
-
 r["LVL"] = math.random(1,18)
 r["MRL"] = math.random(-0.99,0.99)
 
