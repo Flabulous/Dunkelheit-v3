@@ -2,13 +2,13 @@ require "math"
 math.randomseed( os.time() )
 
 hunter = {}
-hunterInventory = {}
 hunter["LVL"] = 0
 hunter["CST"] = 0
 hunter["MRL"] = 0
 
 hunter["DIS"] = "nil"
 hunter["CLS"] = "nil"
+hunter["ABL"] = "nil" -- Hunter-specific exploit
 
 hunter["VIT"] = 0
 hunter["STM"] = 0
@@ -21,6 +21,14 @@ hunter["SPC"] = 0
 hunter["DEX"] = 0
 hunter["MGT"] = 0
 hunter["WIS"] = 0
+
+hunter["EQW"] = item -- Equipped weapon
+hunter["EQA"] = item -- Equipped armor
+hunter["EQI"] = item -- Equipped item
+
+hunter["INV"] = {} --Inventory
+hunter["CRW"] = 0 --Current weight
+hunter["MXW"] = 0 --Maximum weight
 
 function makeHunter(r)
 r = hunter
@@ -37,18 +45,24 @@ if x == 1 then
     r["ATK"] = math.random(3,9)
     r["DEF"] = math.random(3,9)
     r["SPC"] = math.random(6,9)
+
+
     end
 if x == 2 then
     r["DIS"] = "Soldier"
     r["ATK"] = math.random(6,9)
     r["DEF"] = math.random(3,6)
     r["SPC"] = math.random(3,9)
+
+
     end
 if x == 3 then
     r["DIS"] = "Altered"
     r["ATK"] = math.random(3,9)
     r["DEF"] = math.random(6,9)
     r["SPC"] = math.random(3,9)
+
+
     end
 
 x = math.random(3)
