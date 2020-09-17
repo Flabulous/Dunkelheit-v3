@@ -35,8 +35,11 @@ entity["INV"] = {} --Inventory
 entity["CRW"] = 0 --Current weight
 entity["MXW"] = 0 --Maximum weight
 
-function makeEntity(r)
+function makeHunter(r)
 	r = entity
+
+	r["TYP"] = "Hunter"
+
 	r["LVL"] = math.random(1,18)
 	r["MRL"] = math.random(-0.99,0.99)
 
